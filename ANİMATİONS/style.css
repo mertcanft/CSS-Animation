@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+}
+/*NAVBAR*/
+nav {
+  height: 150px;
+  width: 100%;
+  min-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+/* .nav-bar {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+.nav-bar:after {
+  content: "";
+  position: absolute;
+  background-color: #34495e;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav-bara:hover {
+  color: #666060;
+}
+.nav-bar:hover:after {
+  width: 100%;
+} */
+/*BUTTON*/
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.btn {
+  overflow: hidden;
+  background: none;
+  border: 2px solid rgba(6, 146, 188, 1);
+  font-family: "montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  min-width: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  border-radius: 50px;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn::before {
+  border-radius: 50px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 146, 188, 1);
+  z-index: -1;
+  transition: transform 1.9s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(1.6, 0.4);
+}
+.btn1::before {
+  transform: scaleX(0);
+}
+.btn1:hover::before {
+  transform: scaleX(1);
+}
+
+/*BUTTON*/
+/*SEARCH*/
+.search-box {
+  border: 2px solid rgba(6, 146, 188, 1);
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-btn {
+  color: #fff;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(6, 146, 188, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1.4s;
+  text-decoration: none;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 1.4s;
+  line-height: 40px;
+  width: 250px;
+}
+
+.search-txt:focus {
+  width: 500px;
+  padding: 0 6px;
+  top: 50px;
+}
+.serach-txt:focus ~ .search-btn {
+  background-color: rgba(6, 146, 188, 1);
+}
+
+/*SEARCH*/
+/*LOGİN*/
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  text-align: center;
+  border: 2px solid rgba(6, 146, 188, 1);
+  border-radius: 50px;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #0c5576;
+  margin-bottom: 30px;
+  outline: none;
+}
+.login-box .user-box label {
+  position: absolute;
+  left: 10px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #cccccc;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -30px;
+  left: 0;
+  color: rgba(6, 146, 188, 1);
+  font-size: 14px;
+}
+.login-box .user-box input:focus,
+.login-box .user-box input:valid {
+  background-color: #f4f0f0;
+}
+
+/*END OF LOGİN*/
+/*STEP*/
+.container {
+  margin-top: 530px;
+  width: 100%;
+}
+
+.progressbar {
+  padding-bottom: 8px;
+  counter-reset: step;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 75%;
+  margin: 0 auto;
+}
+.active {
+  left: 0;
+}
+.active2 {
+  left: 0;
+  right: 0;
+}
+.active3 {
+  right: 0;
+}
+.progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 30.33%;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.progressbar li {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  background-color: rgba(6, 146, 188, 1);
+}
+
+.progressbar li:hover {
+  transition: 0.8s;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  width: 70px;
+  height: 70px;
+  background-color: green;
+}
+.progressbar li:hover span {
+  margin-left: -10px;
+  transform: rotate(45deg);
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active {
+  color: #fff;
+}
+.progressbar li.active2 {
+  color: #fff;
+}
+.progressbar li.active3 {
+  color: #fff;
+}
+.progressbar li.active:before {
+  border-color: green;
+}
+.progressbar li.active + li:after {
+  background-color: green;
+}
+/*END OF STEP*/
+/*SOCIAL MEDİA İCON*/
+.media {
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 974px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.media-a {
+  color: #fff;
+  background: rgba(6, 146, 188, 1);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-family: fontawesome;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 38px;
+  padding-top: 12px;
+  margin: 0 2px;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-font-smoothing: antialiased;
+}
+
+.media-a:hover {
+  background: #0c5576;
+  border-radius: 50px;
+}
+
+.media-a .media-s {
+  color: #666;
+  position: absolute;
+  font-family: sans-serif;
+  bottom: 0;
+  left: -25px;
+  right: -25px;
+  padding: 5px 7px;
+  z-index: -1;
+  font-size: 14px;
+  border-radius: 2px;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.media-a .media-s:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  bottom: -5px;
+  left: 40px;
+}
+
+.media-a:hover .media-s {
+  bottom: 50px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.media-a:nth-of-type(1):before {
+  content: "\f09a";
+}
+.media-a:nth-of-type(2):before {
+  content: "\f099";
+}
+.media-a:nth-of-type(3):before {
+  content: "\f0d5";
+}
+.media-a:nth-of-type(4):before {
+  content: "\f113";
+}
+.media-a:nth-of-type(5):before {
+  content: "\f232";
+}
+.media-a:nth-of-type(6):before {
+  content: "\f16a ";
+}
+
+/*END SOCIAL MEDİA İCON*/
+/*CHECKBOX*/
+
+.container-c {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-c input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-c:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-c input:checked ~ .checkmark {
+  transition: transform 0.2s;
+  transform: rotate(45deg);
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-c input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-c .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*END CHECKBOX*/
+/*CALENDAR*/
+.main-container-wrapper {
+  margin-top: 80px;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+  /* margin-left: 20px; */
+  background-color: #fff;
+  /* width: 320px; */
+  min-height: 568px;
+  /* max-width: 532px; */
+  overflow-y: auto;
+}
+
+.calendar-container {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.calendar-container__header {
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-container__btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  color: #e9e8e8;
+}
+
+.calendar-container__title {
+  color: #222741;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.calendar-table {
+  margin-top: 12px;
+  width: 100%;
+}
+.calendar-table__item {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  color: #424588;
+  font-size: 12px;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.calendar-table__item:hover {
+  background: #cbcfcf;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.2s all ease-in;
+}
+.calendar-table__row {
+  display: flex;
+  justify-content: center;
+}
+.calendar-table__header {
+  margin-bottom: 4px;
+}
+.calendar-table__header .calendar-table__col {
+  display: inline-block;
+  color: #99a4ae;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 3px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 40px;
+  height: 38px;
+}
+
+.calendar-table__body .calendar-table__col {
+  width: 40px;
+  height: 42px;
+  padding-bottom: 2px;
+}
+
+.calendar-table__today .calendar-table__item {
+  border-color: #fefefe;
+  background-color: #f2f6f8;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.calendar-table__event .calendar-table__item {
+  background-color: rgba(6, 146, 188, 1);
+  border-color: #fefefe;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.calendar-table__event--long {
+  overflow-x: hidden;
+}
+.calendar-table__event--long .calendar-table__item {
+  border-radius: 0;
+  border-width: 2px 0;
+}
+.calendar-table__event--start .calendar-table__item {
+  border-left: 2px solid #fff;
+  border-radius: 50% 0 0 50%;
+}
+.calendar-table__event--start.calendar-table__col:last-child
+  .calendar-table__item {
+  border-width: 2px;
+}
+.calendar-table__event--end .calendar-table__item {
+  border-right: 2px solid #fff;
+  border-radius: 0 50% 50% 0;
+}
+.calendar-table__event--end.calendar-table__col:first-child
+  .calendar-table__item {
+  border-width: 2px;
+}
+.calendar-table__inactive .calendar-table__item {
+  color: #dcdce3;
+  cursor: default;
+}
+.calendar-table__inactive .calendar-table__item:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.calendar-table__inactive.calendar-table__event .calendar-table__item {
+  color: #fff;
+  opacity: 0.25;
+}
+.calendar-table__inactive.calendar-table__event .calendar-table__item:hover {
+  background: rgba(6, 146, 188, 1);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.events-container {
+  padding: 0 15px;
+}
+
+.events__title {
+  color: #bec1ca;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.events__tag {
+  background: rgba(6, 146, 188, 1);
+  border: 2px solid #fefefe;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  width: 60px;
+  margin-left: 16px;
+  padding: 5px 2px;
+  text-align: center;
+}
+.events__tag--highlighted {
+  background: #fdca40;
+}
+.events__item {
+  background: #fff;
+  border-left: 8px solid #86d8c9;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.05);
+  padding: 15px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.events__item--left {
+  width: calc(100% - 76px);
+}
+.events__name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #222741;
+  display: block;
+  margin-bottom: 6px;
+}
+.events__date {
+  font-size: 12px;
+  color: #9faab7;
+  display: inline-block;
+}
+/*END CALENDAR*/
